@@ -1,5 +1,122 @@
 # @react-pdf/stylesheet
 
+## 6.1.1
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @react-pdf/types@2.9.1
+
+## 6.1.0
+
+### Minor Changes
+
+- [#3112](https://github.com/diegomura/react-pdf/pull/3112) [`f89f75c1`](https://github.com/diegomura/react-pdf/commit/f89f75c1f132ba19b54847c3ac23efec675f8d0a) Thanks [@diegomura](https://github.com/diegomura)! - feat: add xLinkHref, gradientTransform and gradientUnits support
+
+### Patch Changes
+
+- Updated dependencies [[`f89f75c1`](https://github.com/diegomura/react-pdf/commit/f89f75c1f132ba19b54847c3ac23efec675f8d0a)]:
+  - @react-pdf/types@2.9.0
+
+## 6.0.2
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @react-pdf/types@2.8.2
+
+## 6.0.1
+
+### Patch Changes
+
+- [#3099](https://github.com/diegomura/react-pdf/pull/3099) [`2a4f1bfc`](https://github.com/diegomura/react-pdf/commit/2a4f1bfca6b84e6c6bbde683447ce8079a1febbe) Thanks [@diegomura](https://github.com/diegomura)! - refactor: stylesheet types
+
+- [#3098](https://github.com/diegomura/react-pdf/pull/3098) [`bfb51ec0`](https://github.com/diegomura/react-pdf/commit/bfb51ec09b851c52659ce16fed1286173e9516a9) Thanks [@diegomura](https://github.com/diegomura)! - refactor: convert render package to TS
+
+- [#3092](https://github.com/diegomura/react-pdf/pull/3092) [`481b536f`](https://github.com/diegomura/react-pdf/commit/481b536f4ad145fb227829399b85a35838a506f8) Thanks [@diegomura](https://github.com/diegomura)! - refactor: convert layout package to TS
+
+- Updated dependencies [[`7cd66e4f`](https://github.com/diegomura/react-pdf/commit/7cd66e4fc37cd1393adc6250a919fe2629812082), [`481b536f`](https://github.com/diegomura/react-pdf/commit/481b536f4ad145fb227829399b85a35838a506f8)]:
+  - @react-pdf/types@2.8.1
+  - @react-pdf/fns@3.1.2
+
+## 6.0.0
+
+### Major Changes
+
+- [#3082](https://github.com/diegomura/react-pdf/pull/3082) [`24fe4bf8`](https://github.com/diegomura/react-pdf/commit/24fe4bf894fff055121926488b30d0bf212a9c45) Thanks [@diegomura](https://github.com/diegomura)! - feat: rework and type stylesheet package
+
+### Patch Changes
+
+- Updated dependencies [[`96c2464d`](https://github.com/diegomura/react-pdf/commit/96c2464dfaa7294e0d79b7ed64743bfd7b1a8c72), [`24fe4bf8`](https://github.com/diegomura/react-pdf/commit/24fe4bf894fff055121926488b30d0bf212a9c45), [`700535c5`](https://github.com/diegomura/react-pdf/commit/700535c57ff1b105d923be70f4fc4bfdf4479f91), [`442ce355`](https://github.com/diegomura/react-pdf/commit/442ce35534f916b9146a35fd03870387ed488d92), [`3007d34a`](https://github.com/diegomura/react-pdf/commit/3007d34ad3e10bf32ada3631938f5bb08e1c549f)]:
+  - @react-pdf/types@2.8.0
+  - @react-pdf/fns@3.1.1
+
+## 5.2.2
+
+### Patch Changes
+
+- Updated dependencies [[`d36ace66`](https://github.com/diegomura/react-pdf/commit/d36ace66c77d57d845894e89772be7ae0cdd25ee)]:
+  - @react-pdf/fns@3.1.0
+
+## 5.2.1
+
+### Patch Changes
+
+- Updated dependencies [[`01944231`](https://github.com/diegomura/react-pdf/commit/01944231a342d502b832aeecb4c313020b8360c8)]:
+  - @react-pdf/types@2.7.1
+
+## 5.2.0
+
+### Minor Changes
+
+- [#2773](https://github.com/diegomura/react-pdf/pull/2773) [`18834efa`](https://github.com/diegomura/react-pdf/commit/18834efac2787a636c378718fee40cbe74f01ab8) Thanks [@nikischin](https://github.com/nikischin)! - Changed unit behavior according to PDF spec. Please note that all unitless values are considered as user unit which is a 72dpi equality of the value. This is according to PDF spec and ensures a consistent layout independent of the dpi setting.
+
+## 5.1.0
+
+### Minor Changes
+
+- [#2955](https://github.com/diegomura/react-pdf/pull/2955) [`425f1183`](https://github.com/diegomura/react-pdf/commit/425f1183bba9a83fd5712a1371abb6cea2ed8fca) Thanks [@diegomura](https://github.com/diegomura)! - feat: support rem units
+
+### Patch Changes
+
+- [#2952](https://github.com/diegomura/react-pdf/pull/2952) [`2c3c887e`](https://github.com/diegomura/react-pdf/commit/2c3c887ea2d3aed2863f49bff375d08feaf975aa) Thanks [@diegomura](https://github.com/diegomura)! - feat: support multiple line-height units
+
+## 5.0.1
+
+### Patch Changes
+
+- [#2950](https://github.com/diegomura/react-pdf/pull/2950) [`77e480cd`](https://github.com/diegomura/react-pdf/commit/77e480cdd161270ac07453525dfaf993e2d3f17f) Thanks [@diegomura](https://github.com/diegomura)! - feat: accept commas between transformations
+
+## 5.0.0
+
+### Major Changes
+
+- [#2871](https://github.com/diegomura/react-pdf/pull/2871) [`70f29a04`](https://github.com/diegomura/react-pdf/commit/70f29a0407b1d56e9a7932b25c0d69132e9b4119) Thanks [@diegomura](https://github.com/diegomura)! - feat!: drop cjs support
+
+### Patch Changes
+
+- Updated dependencies [[`46c3047d`](https://github.com/diegomura/react-pdf/commit/46c3047de56ae82f062b72c4910a4e6096eee99f), [`55973278`](https://github.com/diegomura/react-pdf/commit/55973278ac8bc8f703b63844f57d6f155ae8d86f), [`70f29a04`](https://github.com/diegomura/react-pdf/commit/70f29a0407b1d56e9a7932b25c0d69132e9b4119)]:
+  - @react-pdf/types@2.7.0
+  - @react-pdf/fns@3.0.0
+
+## 4.3.0
+
+### Minor Changes
+
+- [#2771](https://github.com/diegomura/react-pdf/pull/2771) [`8e6a832`](https://github.com/diegomura/react-pdf/commit/8e6a8320f86354aff950c296a96bc41a33e9dab2) Thanks [@nikischin](https://github.com/nikischin)! - fix: fix dpi
+
+### Patch Changes
+
+- Updated dependencies [[`8e6a832`](https://github.com/diegomura/react-pdf/commit/8e6a8320f86354aff950c296a96bc41a33e9dab2), [`4bafab8`](https://github.com/diegomura/react-pdf/commit/4bafab8455c9003759f48bad20a720baf4ed189b)]:
+  - @react-pdf/types@2.6.0
+
+## 4.2.5
+
+### Patch Changes
+
+- Updated dependencies [[`22a34a9`](https://github.com/diegomura/react-pdf/commit/22a34a91b16a201cd8288e0dbea9368b12ca73f5)]:
+  - @react-pdf/types@2.5.0
+
 ## 4.2.4
 
 ### Patch Changes

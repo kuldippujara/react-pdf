@@ -1,5 +1,248 @@
 # @react-pdf/layout
 
+## 4.4.1
+
+### Patch Changes
+
+- [#3152](https://github.com/diegomura/react-pdf/pull/3152) [`beaffd3d`](https://github.com/diegomura/react-pdf/commit/beaffd3d2bb5ac81033ef53421413662d6d71158) Thanks [@Namchee](https://github.com/Namchee)! - chore: replace emoji-regex with emoji-regex-xs
+
+- [#3190](https://github.com/diegomura/react-pdf/pull/3190) [`a99d10fb`](https://github.com/diegomura/react-pdf/commit/a99d10fb2fbb6bfeb233ccb9bf0b703ed092e8d5) Thanks [@carlobeltrame](https://github.com/carlobeltrame)! - Fix yoga error Invalid array length at Array.push(<anonymous>)
+  Fix infinite loop while wrapping pages
+
+- [#3203](https://github.com/diegomura/react-pdf/pull/3203) [`ec063bec`](https://github.com/diegomura/react-pdf/commit/ec063bec8d6a56df42849a8e66521fad7719dc29) Thanks [@100Gyeon](https://github.com/100Gyeon)! - fix: prevent unhandled promise rejections when loading emoji images
+
+- Updated dependencies []:
+  - @react-pdf/types@2.9.1
+  - @react-pdf/stylesheet@6.1.1
+
+## 4.4.0
+
+### Minor Changes
+
+- [#3112](https://github.com/diegomura/react-pdf/pull/3112) [`f89f75c1`](https://github.com/diegomura/react-pdf/commit/f89f75c1f132ba19b54847c3ac23efec675f8d0a) Thanks [@diegomura](https://github.com/diegomura)! - feat: add xLinkHref, gradientTransform and gradientUnits support
+
+### Patch Changes
+
+- Updated dependencies [[`f89f75c1`](https://github.com/diegomura/react-pdf/commit/f89f75c1f132ba19b54847c3ac23efec675f8d0a)]:
+  - @react-pdf/stylesheet@6.1.0
+  - @react-pdf/types@2.9.0
+
+## 4.3.1
+
+### Patch Changes
+
+- [`e257f7ee`](https://github.com/diegomura/react-pdf/commit/e257f7ee18ff09f4895cd16c0b21b824678384c8) Thanks [@diegomura](https://github.com/diegomura)! - fix: font store types
+
+- Updated dependencies []:
+  - @react-pdf/types@2.8.2
+  - @react-pdf/stylesheet@6.0.2
+
+## 4.3.0
+
+### Minor Changes
+
+- [#3100](https://github.com/diegomura/react-pdf/pull/3100) [`a9ef6416`](https://github.com/diegomura/react-pdf/commit/a9ef6416473c86f6d8fe35c3d7231e642d6ae265) Thanks [@diegomura](https://github.com/diegomura)! - feat: support percentage gap
+
+- [#3102](https://github.com/diegomura/react-pdf/pull/3102) [`24690f52`](https://github.com/diegomura/react-pdf/commit/24690f5238e4eacf28351cf9996856a7d196d29e) Thanks [@diegomura](https://github.com/diegomura)! - feat: handle standard fonts in fonts package
+
+- [#3092](https://github.com/diegomura/react-pdf/pull/3092) [`481b536f`](https://github.com/diegomura/react-pdf/commit/481b536f4ad145fb227829399b85a35838a506f8) Thanks [@diegomura](https://github.com/diegomura)! - refactor: convert layout package to TS
+
+- [#3103](https://github.com/diegomura/react-pdf/pull/3103) [`b06d3a0f`](https://github.com/diegomura/react-pdf/commit/b06d3a0f64593ac18097efd061334f1e5bd70095) Thanks [@diegomura](https://github.com/diegomura)! - refactor: unify font substitution engines
+
+### Patch Changes
+
+- [#3104](https://github.com/diegomura/react-pdf/pull/3104) [`ddfa3675`](https://github.com/diegomura/react-pdf/commit/ddfa367587618b313b4b0b3b57a9a7631e8e7604) Thanks [@diegomura](https://github.com/diegomura)! - feat(textkit): expect font array
+
+- [#3098](https://github.com/diegomura/react-pdf/pull/3098) [`bfb51ec0`](https://github.com/diegomura/react-pdf/commit/bfb51ec09b851c52659ce16fed1286173e9516a9) Thanks [@diegomura](https://github.com/diegomura)! - refactor: convert render package to TS
+
+- [#3101](https://github.com/diegomura/react-pdf/pull/3101) [`fce45ea5`](https://github.com/diegomura/react-pdf/commit/fce45ea5860038e7f3b227cabf0dd6212f4404b8) Thanks [@diegomura](https://github.com/diegomura)! - fix: layout package types
+
+- Updated dependencies [[`2a4f1bfc`](https://github.com/diegomura/react-pdf/commit/2a4f1bfca6b84e6c6bbde683447ce8079a1febbe), [`7cd66e4f`](https://github.com/diegomura/react-pdf/commit/7cd66e4fc37cd1393adc6250a919fe2629812082), [`ddfa3675`](https://github.com/diegomura/react-pdf/commit/ddfa367587618b313b4b0b3b57a9a7631e8e7604), [`3fb01a90`](https://github.com/diegomura/react-pdf/commit/3fb01a90e590a31c097b3422fc911af61d65420a), [`c7b74963`](https://github.com/diegomura/react-pdf/commit/c7b749632f07db7808d58d99357dc830d4895da8), [`bfb51ec0`](https://github.com/diegomura/react-pdf/commit/bfb51ec09b851c52659ce16fed1286173e9516a9), [`24690f52`](https://github.com/diegomura/react-pdf/commit/24690f5238e4eacf28351cf9996856a7d196d29e), [`481b536f`](https://github.com/diegomura/react-pdf/commit/481b536f4ad145fb227829399b85a35838a506f8), [`b06d3a0f`](https://github.com/diegomura/react-pdf/commit/b06d3a0f64593ac18097efd061334f1e5bd70095)]:
+  - @react-pdf/stylesheet@6.0.1
+  - @react-pdf/types@2.8.1
+  - @react-pdf/textkit@6.0.0
+  - @react-pdf/image@3.0.3
+  - @react-pdf/fns@3.1.2
+
+## 4.2.3
+
+### Patch Changes
+
+- [#3082](https://github.com/diegomura/react-pdf/pull/3082) [`24fe4bf8`](https://github.com/diegomura/react-pdf/commit/24fe4bf894fff055121926488b30d0bf212a9c45) Thanks [@diegomura](https://github.com/diegomura)! - feat: rework and type stylesheet package
+
+- [#3077](https://github.com/diegomura/react-pdf/pull/3077) [`442ce355`](https://github.com/diegomura/react-pdf/commit/442ce35534f916b9146a35fd03870387ed488d92) Thanks [@diegomura](https://github.com/diegomura)! - refactor: convert textkit package to TS
+
+- Updated dependencies [[`226467e3`](https://github.com/diegomura/react-pdf/commit/226467e39443d3690b8f8c3298aa8278b43fbfa6), [`96c2464d`](https://github.com/diegomura/react-pdf/commit/96c2464dfaa7294e0d79b7ed64743bfd7b1a8c72), [`24fe4bf8`](https://github.com/diegomura/react-pdf/commit/24fe4bf894fff055121926488b30d0bf212a9c45), [`700535c5`](https://github.com/diegomura/react-pdf/commit/700535c57ff1b105d923be70f4fc4bfdf4479f91), [`442ce355`](https://github.com/diegomura/react-pdf/commit/442ce35534f916b9146a35fd03870387ed488d92), [`8d39fc46`](https://github.com/diegomura/react-pdf/commit/8d39fc4602730755ee63824ad4ed6ecd1bcd059f), [`3007d34a`](https://github.com/diegomura/react-pdf/commit/3007d34ad3e10bf32ada3631938f5bb08e1c549f)]:
+  - @react-pdf/pdfkit@4.0.2
+  - @react-pdf/primitives@4.1.1
+  - @react-pdf/types@2.8.0
+  - @react-pdf/stylesheet@6.0.0
+  - @react-pdf/fns@3.1.1
+  - @react-pdf/textkit@5.0.3
+  - @react-pdf/image@3.0.2
+
+## 4.2.2
+
+### Patch Changes
+
+- Updated dependencies [[`d36ace66`](https://github.com/diegomura/react-pdf/commit/d36ace66c77d57d845894e89772be7ae0cdd25ee)]:
+  - @react-pdf/fns@3.1.0
+  - @react-pdf/stylesheet@5.2.2
+  - @react-pdf/textkit@5.0.2
+
+## 4.2.1
+
+### Patch Changes
+
+- [`fabecc56`](https://github.com/diegomura/react-pdf/commit/fabecc56727dfb6d590a3fa1e11f50250ecbbea1) Thanks [@diegomura](https://github.com/diegomura)! - chore: bump yoga-layout
+
+- Updated dependencies [[`7cd71714`](https://github.com/diegomura/react-pdf/commit/7cd7171472b0f300db56b7805c5f966bf4ced6e2), [`01944231`](https://github.com/diegomura/react-pdf/commit/01944231a342d502b832aeecb4c313020b8360c8), [`6d875056`](https://github.com/diegomura/react-pdf/commit/6d875056a07e8479ef695416c1fed575491b6ff1), [`49daae8f`](https://github.com/diegomura/react-pdf/commit/49daae8fdfba672a3e828847232ee9b70bb51711), [`5cc47319`](https://github.com/diegomura/react-pdf/commit/5cc47319bb428f6d4bcad21cd6dba9afca5cdc17), [`aa0f6725`](https://github.com/diegomura/react-pdf/commit/aa0f672589683a66abc79f838291996ae9aaffb8)]:
+  - @react-pdf/primitives@4.1.0
+  - @react-pdf/types@2.7.1
+  - @react-pdf/pdfkit@4.0.1
+  - @react-pdf/stylesheet@5.2.1
+
+## 4.2.0
+
+### Minor Changes
+
+- [#2773](https://github.com/diegomura/react-pdf/pull/2773) [`18834efa`](https://github.com/diegomura/react-pdf/commit/18834efac2787a636c378718fee40cbe74f01ab8) Thanks [@nikischin](https://github.com/nikischin)! - Changed unit behavior according to PDF spec. Please note that all unitless values are considered as user unit which is a 72dpi equality of the value. This is according to PDF spec and ensures a consistent layout independent of the dpi setting.
+
+### Patch Changes
+
+- Updated dependencies [[`18834efa`](https://github.com/diegomura/react-pdf/commit/18834efac2787a636c378718fee40cbe74f01ab8)]:
+  - @react-pdf/stylesheet@5.2.0
+
+## 4.1.3
+
+### Patch Changes
+
+- Updated dependencies [[`00bfdc1e`](https://github.com/diegomura/react-pdf/commit/00bfdc1e5a6c673d2de7b3ab09d5020e932562fb)]:
+  - @react-pdf/textkit@5.0.1
+
+## 4.1.2
+
+### Patch Changes
+
+- [#2955](https://github.com/diegomura/react-pdf/pull/2955) [`425f1183`](https://github.com/diegomura/react-pdf/commit/425f1183bba9a83fd5712a1371abb6cea2ed8fca) Thanks [@diegomura](https://github.com/diegomura)! - feat: support rem units
+
+- [#2952](https://github.com/diegomura/react-pdf/pull/2952) [`2c3c887e`](https://github.com/diegomura/react-pdf/commit/2c3c887ea2d3aed2863f49bff375d08feaf975aa) Thanks [@diegomura](https://github.com/diegomura)! - feat: support multiple line-height units
+
+- Updated dependencies [[`425f1183`](https://github.com/diegomura/react-pdf/commit/425f1183bba9a83fd5712a1371abb6cea2ed8fca), [`2c3c887e`](https://github.com/diegomura/react-pdf/commit/2c3c887ea2d3aed2863f49bff375d08feaf975aa)]:
+  - @react-pdf/stylesheet@5.1.0
+
+## 4.1.1
+
+### Patch Changes
+
+- [#2947](https://github.com/diegomura/react-pdf/pull/2947) [`ed562b9b`](https://github.com/diegomura/react-pdf/commit/ed562b9b7f14bc76a1cd83aaaf1dab966bd7540b) Thanks [@diegomura](https://github.com/diegomura)! - feat: remove cross-fetch
+
+- Updated dependencies [[`ed562b9b`](https://github.com/diegomura/react-pdf/commit/ed562b9b7f14bc76a1cd83aaaf1dab966bd7540b), [`77e480cd`](https://github.com/diegomura/react-pdf/commit/77e480cdd161270ac07453525dfaf993e2d3f17f)]:
+  - @react-pdf/image@3.0.1
+  - @react-pdf/stylesheet@5.0.1
+
+## 4.1.0
+
+### Minor Changes
+
+- [#2736](https://github.com/diegomura/react-pdf/pull/2736) [`b242e59a`](https://github.com/diegomura/react-pdf/commit/b242e59a14a856e280c9fcbad81f707248819721) Thanks [@siketyan](https://github.com/siketyan)! - Use monochrome emojis contained in the font family if no emoji source available
+
+## 4.0.1
+
+### Patch Changes
+
+- [#2878](https://github.com/diegomura/react-pdf/pull/2878) [`58f9a047`](https://github.com/diegomura/react-pdf/commit/58f9a04740ed1331ef1dfa9999fb43c0ee10fa5b) Thanks [@jmezzacappa](https://github.com/jmezzacappa)! - Prevent Yoga init from running more than once
+
+## 4.0.0
+
+### Major Changes
+
+- [#2711](https://github.com/diegomura/react-pdf/pull/2711) [`42570321`](https://github.com/diegomura/react-pdf/commit/42570321af54bf331ca81f09a102664cd9f7c46a) Thanks [@wojtekmaj](https://github.com/wojtekmaj)! - Update Yoga to 3.0
+
+- [#2871](https://github.com/diegomura/react-pdf/pull/2871) [`70f29a04`](https://github.com/diegomura/react-pdf/commit/70f29a0407b1d56e9a7932b25c0d69132e9b4119) Thanks [@diegomura](https://github.com/diegomura)! - feat!: drop cjs support
+
+### Minor Changes
+
+- [#2876](https://github.com/diegomura/react-pdf/pull/2876) [`afe4bcfe`](https://github.com/diegomura/react-pdf/commit/afe4bcfe6f4b991cf22341242fc27d169b758d47) Thanks [@diegomura](https://github.com/diegomura)! - feat: add gap percentage support
+
+- [#2875](https://github.com/diegomura/react-pdf/pull/2875) [`46c3047d`](https://github.com/diegomura/react-pdf/commit/46c3047de56ae82f062b72c4910a4e6096eee99f) Thanks [@diegomura](https://github.com/diegomura)! - feat: add position: static support
+
+- [#2874](https://github.com/diegomura/react-pdf/pull/2874) [`55973278`](https://github.com/diegomura/react-pdf/commit/55973278ac8bc8f703b63844f57d6f155ae8d86f) Thanks [@diegomura](https://github.com/diegomura)! - feat: add align-content: space-evenly support
+
+### Patch Changes
+
+- Updated dependencies [[`fdcef566`](https://github.com/diegomura/react-pdf/commit/fdcef5666e4eeed542b625d394cdfe60d6346600), [`46c3047d`](https://github.com/diegomura/react-pdf/commit/46c3047de56ae82f062b72c4910a4e6096eee99f), [`55973278`](https://github.com/diegomura/react-pdf/commit/55973278ac8bc8f703b63844f57d6f155ae8d86f), [`70f29a04`](https://github.com/diegomura/react-pdf/commit/70f29a0407b1d56e9a7932b25c0d69132e9b4119)]:
+  - @react-pdf/pdfkit@4.0.0
+  - @react-pdf/image@3.0.0
+  - @react-pdf/types@2.7.0
+  - @react-pdf/primitives@4.0.0
+  - @react-pdf/stylesheet@5.0.0
+  - @react-pdf/textkit@5.0.0
+  - @react-pdf/fns@3.0.0
+
+## 3.13.0
+
+### Minor Changes
+
+- [#2771](https://github.com/diegomura/react-pdf/pull/2771) [`8e6a832`](https://github.com/diegomura/react-pdf/commit/8e6a8320f86354aff950c296a96bc41a33e9dab2) Thanks [@nikischin](https://github.com/nikischin)! - fix: fix dpi
+
+### Patch Changes
+
+- [#2864](https://github.com/diegomura/react-pdf/pull/2864) [`e425ca4`](https://github.com/diegomura/react-pdf/commit/e425ca4add7eb353b6282a40fd1020aad0da36c4) Thanks [@nnaku](https://github.com/nnaku)! - Prevent loading yoga-layout wasm binaries more than once
+
+- [#2822](https://github.com/diegomura/react-pdf/pull/2822) [`e42a79a`](https://github.com/diegomura/react-pdf/commit/e42a79a3857932a4ebc89feb6e4d2c891280d633) Thanks [@mantljosh](https://github.com/mantljosh)! - fix: prevent infinite loop while splitting pages
+
+- [#2747](https://github.com/diegomura/react-pdf/pull/2747) [`5af35ec`](https://github.com/diegomura/react-pdf/commit/5af35ec9743cc0d7bf75f5ca789627517ff35816) Thanks [@andrew-spare](https://github.com/andrew-spare)! - fix: font selection regression
+
+- Updated dependencies [[`8e6a832`](https://github.com/diegomura/react-pdf/commit/8e6a8320f86354aff950c296a96bc41a33e9dab2), [`4bafab8`](https://github.com/diegomura/react-pdf/commit/4bafab8455c9003759f48bad20a720baf4ed189b)]:
+  - @react-pdf/pdfkit@3.2.0
+  - @react-pdf/stylesheet@4.3.0
+  - @react-pdf/types@2.6.0
+
+## 3.12.1
+
+### Patch Changes
+
+- Updated dependencies [[`22a34a9`](https://github.com/diegomura/react-pdf/commit/22a34a91b16a201cd8288e0dbea9368b12ca73f5)]:
+  - @react-pdf/types@2.5.0
+  - @react-pdf/stylesheet@4.2.5
+
+## 3.12.0
+
+### Minor Changes
+
+- [#2640](https://github.com/diegomura/react-pdf/pull/2640) [`67c265a`](https://github.com/diegomura/react-pdf/commit/67c265a7e39cc0baa319f49137219677904695e6) Thanks [@nikgraf](https://github.com/nikgraf)! - Add support for fontFamily fallbacks e.g. fontFamily: ['Roboto', 'NotoSansArabic']
+
+### Patch Changes
+
+- Updated dependencies [[`713690c`](https://github.com/diegomura/react-pdf/commit/713690cca266116bb7e80d13cf84bc843f9dfd52)]:
+  - @react-pdf/pdfkit@3.1.10
+
+## 3.11.5
+
+### Patch Changes
+
+- Updated dependencies [[`e2d21a4`](https://github.com/diegomura/react-pdf/commit/e2d21a433b881bb96ea4d0b3a01a7297dd1f4a94)]:
+  - @react-pdf/pdfkit@3.1.9
+
+## 3.11.4
+
+### Patch Changes
+
+- Updated dependencies [[`68bfc57`](https://github.com/diegomura/react-pdf/commit/68bfc575adfb95302e320019715d1eec5398259f)]:
+  - @react-pdf/pdfkit@3.1.8
+  - @react-pdf/image@2.3.6
+
+## 3.11.3
+
+### Patch Changes
+
+- [#2629](https://github.com/diegomura/react-pdf/pull/2629) [`087ee22`](https://github.com/diegomura/react-pdf/commit/087ee22f63a922a2d3ee01bae3b0351f99cb9021) Thanks [@diegomura](https://github.com/diegomura)! - fix: resolve styles on dynamic elements
+
+- Updated dependencies [[`da10a9b`](https://github.com/diegomura/react-pdf/commit/da10a9bb43dc4c4765687850444a24cbc4eb402a)]:
+  - @react-pdf/pdfkit@3.1.7
+  - @react-pdf/image@2.3.5
+
 ## 3.11.2
 
 ### Patch Changes

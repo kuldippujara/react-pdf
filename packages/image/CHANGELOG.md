@@ -1,5 +1,50 @@
 # @react-pdf/image
 
+## 3.0.3
+
+### Patch Changes
+
+- [#3094](https://github.com/diegomura/react-pdf/pull/3094) [`3fb01a90`](https://github.com/diegomura/react-pdf/commit/3fb01a90e590a31c097b3422fc911af61d65420a) Thanks [@diegomura](https://github.com/diegomura)! - refactor: image strict type checking
+
+- [#3092](https://github.com/diegomura/react-pdf/pull/3092) [`481b536f`](https://github.com/diegomura/react-pdf/commit/481b536f4ad145fb227829399b85a35838a506f8) Thanks [@diegomura](https://github.com/diegomura)! - refactor: convert layout package to TS
+
+## 3.0.2
+
+### Patch Changes
+
+- [#3078](https://github.com/diegomura/react-pdf/pull/3078) [`8d39fc46`](https://github.com/diegomura/react-pdf/commit/8d39fc4602730755ee63824ad4ed6ecd1bcd059f) Thanks [@diegomura](https://github.com/diegomura)! - fix: add types to image package.json
+
+## 3.0.1
+
+### Patch Changes
+
+- [#2947](https://github.com/diegomura/react-pdf/pull/2947) [`ed562b9b`](https://github.com/diegomura/react-pdf/commit/ed562b9b7f14bc76a1cd83aaaf1dab966bd7540b) Thanks [@diegomura](https://github.com/diegomura)! - feat: remove cross-fetch
+
+## 3.0.0
+
+### Major Changes
+
+- [#2871](https://github.com/diegomura/react-pdf/pull/2871) [`70f29a04`](https://github.com/diegomura/react-pdf/commit/70f29a0407b1d56e9a7932b25c0d69132e9b4119) Thanks [@diegomura](https://github.com/diegomura)! - feat!: drop cjs support
+
+### Patch Changes
+
+- [#2877](https://github.com/diegomura/react-pdf/pull/2877) [`fdcef566`](https://github.com/diegomura/react-pdf/commit/fdcef5666e4eeed542b625d394cdfe60d6346600) Thanks [@Friendseeker](https://github.com/Friendseeker)! - chore: bump jay-peg
+
+- Updated dependencies [[`70f29a04`](https://github.com/diegomura/react-pdf/commit/70f29a0407b1d56e9a7932b25c0d69132e9b4119)]:
+  - @react-pdf/png-js@3.0.0
+
+## 2.3.6
+
+### Patch Changes
+
+- [#2687](https://github.com/diegomura/react-pdf/pull/2687) [`68bfc57`](https://github.com/diegomura/react-pdf/commit/68bfc575adfb95302e320019715d1eec5398259f) Thanks [@diegomura](https://github.com/diegomura)! - chore: bump jay-peg
+
+## 2.3.5
+
+### Patch Changes
+
+- [#2635](https://github.com/diegomura/react-pdf/pull/2635) [`da10a9b`](https://github.com/diegomura/react-pdf/commit/da10a9bb43dc4c4765687850444a24cbc4eb402a) Thanks [@wojtekmaj](https://github.com/wojtekmaj)! - fix: bump jay-peg dependency to fix CJS module resolution error
+
 ## 2.3.4
 
 ### Patch Changes

@@ -1,5 +1,7 @@
+import { dts } from 'rollup-plugin-dts';
+import del from 'rollup-plugin-delete';
+import typescript from '@rollup/plugin-typescript';
 import localResolve from 'rollup-plugin-local-resolve';
-import babel from '@rollup/plugin-babel';
 
 import pkg from './package.json' with { type: 'json' };
 
@@ -12,11 +14,6 @@ const cjs = {
 const esm = {
   format: 'es',
 };
-
-const getCJS = (override) => Object.assign({}, cjs, override);
-const getESM = (override) => Object.assign({}, esm, override);
-
-const input = 'src/index.js';
 
 const getExternal = () => [
   ...Object.keys(pkg.dependencies),
@@ -34,10 +31,16 @@ const getPlugins = () => [
 ];
 
 const config = {
-  input,
-  output: [getESM({ file: 'lib/index.js' }), getCJS({ file: 'lib/index.cjs' })],
-  external: getExternal(),
-  plugins: getPlugins(),
+  input: 'src/index.ts',
+  output: { format: 'es', file: 'lib/index.js' },
+  external: [...Object.keys(pkg.dependencies), /@react-pdf/],
+  plugins: [typescript(), localResolve()],
 };
 
-export default config;
+const dtsConfig = {
+  input: './lib/types/index.d.ts',
+  output: [{ file: 'lib/index.d.ts', format: 'es' }],
+  plugins: [dts(), del({ targets: 'lib/types', hook: 'buildEnd' })],
+};
+
+export default [config, dtsConfig];

@@ -1,3 +1,8 @@
+/*
+PDFDocument - represents an entire PDF document
+By Devon Govett
+*/
+
 import stream from 'stream';
 import PDFObject from './object';
 import PDFReference from './reference';
@@ -14,12 +19,13 @@ import OutlineMixin from './mixins/outline';
 import MarkingsMixin from './mixins/markings';
 import AcroFormMixin from './mixins/acroform';
 import AttachmentsMixin from './mixins/attachments';
+import LineWrapper from './line_wrapper';
+import SubsetMixin from './mixins/subsets';
 import MetadataMixin from './mixins/metadata';
-import capitalize from './utils/capitalize';
 
 class PDFDocument extends stream.Readable {
   constructor(options = {}) {
-    super();
+    super(options);
     this.options = options;
 
     // PDF version
@@ -54,7 +60,6 @@ class PDFDocument extends stream.Readable {
     this._waiting = 0;
     this._ended = false;
     this._offset = 0;
-
     const Pages = this.ref({
       Type: 'Pages',
       Count: 0,
@@ -75,25 +80,19 @@ class PDFDocument extends stream.Readable {
       this._root.data.Lang = new String(this.options.lang);
     }
 
-    if (this.options.pageLayout) {
-      this._root.data.PageLayout = capitalize(this.options.pageLayout);
-    }
-
-    if (this.options.pageMode) {
-      this._root.data.PageMode = capitalize(this.options.pageMode);
-    }
-
     // The current page
     this.page = null;
 
     // Initialize mixins
+    this.initMetadata();
     this.initColor();
     this.initVector();
-    this.initFonts();
+    this.initFonts(options.font);
     this.initText();
     this.initImages();
     this.initOutline();
-    // this.initMarkings(options)
+    this.initMarkings(options);
+    this.initSubset(options);
 
     // Initialize the metadata
     this.info = {
@@ -121,7 +120,8 @@ class PDFDocument extends stream.Readable {
     // Initialize security settings
     // this._security = PDFSecurity.create(this, options);
 
-    // Write the header PDF version
+    // Write the header
+    // PDF version
     this._write(`%PDF-${this.version}`);
 
     // 4 binary chars, as recommended by the spec
@@ -134,7 +134,6 @@ class PDFDocument extends stream.Readable {
   }
 
   addPage(options) {
-    // end the current page if needed
     if (options == null) {
       ({ options } = this);
     }
@@ -153,14 +152,45 @@ class PDFDocument extends stream.Readable {
     pages.Kids.push(this.page.dictionary);
     pages.Count++;
 
+    // reset x and y coordinates
+    this.x = this.page.margins.left;
+    this.y = this.page.margins.top;
+
     // flip PDF coordinate system so that the origin is in
     // the top left rather than the bottom left
     this._ctm = [1, 0, 0, 1, 0, 0];
     this.transform(1, 0, 0, -1, 0, this.page.height);
 
-    // this.emit('pageAdded');
+    this.emit('pageAdded');
 
     return this;
+  }
+
+  continueOnNewPage(options) {
+    const pageMarkings = this.endPageMarkings(this.page);
+
+    this.addPage(options ?? this.page._options);
+
+    this.initPageMarkings(pageMarkings);
+
+    return this;
+  }
+
+  bufferedPageRange() {
+    return { start: this._pageBufferStart, count: this._pageBuffer.length };
+  }
+
+  switchToPage(n) {
+    let page;
+    if (!(page = this._pageBuffer[n - this._pageBufferStart])) {
+      throw new Error(
+        `switchToPage(${n}) out of bounds, current buffer covers pages ${
+          this._pageBufferStart
+        } to ${this._pageBufferStart + this._pageBuffer.length - 1}`
+      );
+    }
+
+    return (this.page = page);
   }
 
   flushPages() {
@@ -169,8 +199,8 @@ class PDFDocument extends stream.Readable {
     const pages = this._pageBuffer;
     this._pageBuffer = [];
     this._pageBufferStart += pages.length;
-    for (let page of Array.from(pages)) {
-      // this.endPageMarkings(page);
+    for (let page of pages) {
+      this.endPageMarkings(page);
       page.end();
     }
   }
@@ -216,9 +246,8 @@ class PDFDocument extends stream.Readable {
     return ref;
   }
 
-  _read() {
-    // do nothing, but this method is required by node
-  }
+  _read() {}
+  // do nothing, but this method is required by node
 
   _write(data) {
     if (!Buffer.isBuffer(data)) {
@@ -244,6 +273,7 @@ class PDFDocument extends stream.Readable {
 
   end() {
     this.flushPages();
+
     this._info = this.ref();
     for (let key in this.info) {
       let val = this.info[key];
@@ -265,7 +295,13 @@ class PDFDocument extends stream.Readable {
     }
 
     this.endOutline();
-    // this.endMarkings();
+    this.endMarkings();
+
+    if (this.subset) {
+      this.endSubset();
+    }
+
+    this.endMetadata();
 
     this._root.end();
     this._root.data.Pages.end();
@@ -276,15 +312,15 @@ class PDFDocument extends stream.Readable {
       this._root.data.ViewerPreferences.end();
     }
 
-    // if (this._security) {
-    //   this._security.end();
-    // }
+    if (this._security) {
+      this._security.end();
+    }
 
     if (this._waiting === 0) {
       return this._finalize();
+    } else {
+      return (this._ended = true);
     }
-
-    this._ended = true;
   }
 
   _finalize() {
@@ -294,7 +330,7 @@ class PDFDocument extends stream.Readable {
     this._write(`0 ${this._offsets.length + 1}`);
     this._write('0000000000 65535 f ');
 
-    for (let offset of Array.from(this._offsets)) {
+    for (let offset of this._offsets) {
       offset = `0000000000${offset}`.slice(-10);
       this._write(offset + ' 00000 n ');
     }
@@ -306,10 +342,9 @@ class PDFDocument extends stream.Readable {
       Info: this._info,
       ID: [this._id, this._id]
     };
-
-    // if (this._security) {
-    //   trailer.Encrypt = this._security.dictionary;
-    // }
+    if (this._security) {
+      trailer.Encrypt = this._security.dictionary;
+    }
 
     this._write('trailer');
     this._write(PDFObject.convert(trailer));
@@ -325,40 +360,12 @@ class PDFDocument extends stream.Readable {
   toString() {
     return '[object PDFDocument]';
   }
-
-  initColor() {}
-
-  initVector() {}
-
-  initFonts() {}
-
-  initText() {}
-
-  initImages() {}
-
-  initOutline() {}
-
-  /**
-   * @param {number} m11
-   * @param {number} m12
-   * @param {number} m21
-   * @param {number} m22
-   * @param {number} dx
-   * @param {number} dy
-   */
-  // eslint-disable-next-line no-unused-vars
-  transform(m11, m12, m21, m22, dx, dy) {}
-
-  endOutline() {}
-
-  endAcroForm() {}
 }
 
 const mixin = (methods) => {
   Object.assign(PDFDocument.prototype, methods);
 };
 
-// Load mixins
 mixin(MetadataMixin);
 mixin(ColorMixin);
 mixin(VectorMixin);
@@ -370,5 +377,8 @@ mixin(OutlineMixin);
 mixin(MarkingsMixin);
 mixin(AcroFormMixin);
 mixin(AttachmentsMixin);
+mixin(SubsetMixin);
+
+PDFDocument.LineWrapper = LineWrapper;
 
 export default PDFDocument;

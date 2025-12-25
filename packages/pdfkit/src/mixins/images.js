@@ -6,39 +6,8 @@ export default {
     return (this._imageCount = 0);
   },
 
-  embedImage(src) {
-    let image;
-
-    if (typeof src === 'string') {
-      image = this._imageRegistry[src];
-    }
-
-    if (!image) {
-      if (src.width && src.height) {
-        image = src;
-      } else {
-        image = this.openImage(src);
-      }
-    }
-
-    if (!image.obj) {
-      image.embed(this);
-    }
-
-    return image;
-  },
-
   image(src, x, y, options = {}) {
-    let bh;
-    let bp;
-    let bw;
-    let image;
-    let ip;
-    let left;
-    let left1;
-    let rotateAngle;
-    let originX;
-    let originY;
+    let bh, bp, bw, image, ip, left, left1, rotateAngle, originX, originY;
     if (typeof x === 'object') {
       options = x;
       x = null;
@@ -214,6 +183,17 @@ export default {
       h = -h;
       y -= h;
       rotateAngle = 0;
+    }
+
+    // create link annotations if the link option is given
+    if (options.link != null) {
+      this.link(x, y, w, h, options.link);
+    }
+    if (options.goTo != null) {
+      this.goTo(x, y, w, h, options.goTo);
+    }
+    if (options.destination != null) {
+      this.addNamedDestination(options.destination, 'XYZ', x, y, null);
     }
 
     // Set the current y position to below the image if it is in the document flow

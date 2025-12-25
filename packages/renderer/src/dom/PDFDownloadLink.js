@@ -1,17 +1,18 @@
-/* eslint-disable no-console */
-
-import { useEffect } from 'react';
+import { forwardRef, useEffect } from 'react';
 
 import usePDF from './usePDF';
 
-export const PDFDownloadLink = ({
-  fileName = 'document.pdf',
-  document: doc,
-  children,
-  onClick,
-  href: _filteredOutHref,
-  ...rest
-}) => {
+const PDFDownloadLinkBase = (
+  {
+    fileName = 'document.pdf',
+    document: doc,
+    children,
+    onClick,
+    href,
+    ...rest
+  },
+  ref,
+) => {
   const [instance, updateInstance] = usePDF();
 
   useEffect(() => updateInstance(doc), [doc]);
@@ -22,7 +23,7 @@ export const PDFDownloadLink = ({
   }
 
   const handleDownloadIE = () => {
-    if (window.navigator.msSaveBlob) {
+    if (instance && window.navigator.msSaveBlob) {
       // IE
       window.navigator.msSaveBlob(instance.blob, fileName);
     }
@@ -34,10 +35,18 @@ export const PDFDownloadLink = ({
   };
 
   return (
-    <a href={instance.url} download={fileName} onClick={handleClick} {...rest}>
+    <a
+      href={instance.url}
+      download={fileName}
+      onClick={handleClick}
+      ref={ref}
+      {...rest}
+    >
       {typeof children === 'function' ? children(instance) : children}
     </a>
   );
 };
+
+export const PDFDownloadLink = forwardRef(PDFDownloadLinkBase);
 
 export default PDFDownloadLink;

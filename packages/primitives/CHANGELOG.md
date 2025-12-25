@@ -1,5 +1,23 @@
 # @react-pdf/primitives
 
+## 4.1.1
+
+### Patch Changes
+
+- [#3067](https://github.com/diegomura/react-pdf/pull/3067) [`96c2464d`](https://github.com/diegomura/react-pdf/commit/96c2464dfaa7294e0d79b7ed64743bfd7b1a8c72) Thanks [@diegomura](https://github.com/diegomura)! - refactor: convert primitives package to TS
+
+## 4.1.0
+
+### Minor Changes
+
+- [`7cd71714`](https://github.com/diegomura/react-pdf/commit/7cd7171472b0f300db56b7805c5f966bf4ced6e2) Thanks [@diegomura](https://github.com/diegomura)! - feat: added Form Annotation support
+
+## 4.0.0
+
+### Major Changes
+
+- [#2871](https://github.com/diegomura/react-pdf/pull/2871) [`70f29a04`](https://github.com/diegomura/react-pdf/commit/70f29a0407b1d56e9a7932b25c0d69132e9b4119) Thanks [@diegomura](https://github.com/diegomura)! - feat!: drop cjs support
+
 ## 3.1.1
 
 ### Patch Changes

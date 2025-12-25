@@ -63,20 +63,14 @@ const getPlugins = ({ browser }) => [
 
 const serverConfig = {
   input,
-  output: [
-    getESM({ file: 'lib/png-js.js' }),
-    getCJS({ file: 'lib/png-js.cjs' }),
-  ],
+  output: { format: 'es', file: 'lib/png-js.js' },
   external: getExternal({ browser: false }),
   plugins: getPlugins({ browser: false }),
 };
 
 const browserConfig = {
   input,
-  output: [
-    getESM({ file: 'lib/png-js.browser.js' }),
-    getCJS({ file: 'lib/png-js.browser.cjs' }),
-  ],
+  output: { format: 'es', file: 'lib/png-js.browser.js' },
   external: getExternal({ browser: true }),
   plugins: getPlugins({ browser: true }),
 };

@@ -45,14 +45,14 @@ const splitNode = (node, height) => {
   let next;
   if (node?.style?.backgroundImage) {
     next = Object.assign({}, node, {
-        no_top: true,
-        box: {
-          ...node.box,
-        },
-        style: {
-          ...node.style,
-        },
-      });
+      no_top: true,
+      box: {
+        ...node.box,
+      },
+      style: {
+        ...node.style,
+      },
+    });
   } else {
     next = Object.assign({}, node, {
       box: {

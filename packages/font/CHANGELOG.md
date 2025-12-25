@@ -1,5 +1,102 @@
 # @react-pdf/font
 
+## 4.0.3
+
+### Patch Changes
+
+- Updated dependencies [[`5cbe2fb0`](https://github.com/diegomura/react-pdf/commit/5cbe2fb0bde45c44eb68dde01f20feea245908c6)]:
+  - @react-pdf/pdfkit@4.0.4
+  - @react-pdf/types@2.9.1
+
+## 4.0.2
+
+### Patch Changes
+
+- Updated dependencies [[`f89f75c1`](https://github.com/diegomura/react-pdf/commit/f89f75c1f132ba19b54847c3ac23efec675f8d0a), [`106699e8`](https://github.com/diegomura/react-pdf/commit/106699e850dad2285e6999d59975111f217e8a81)]:
+  - @react-pdf/types@2.9.0
+  - @react-pdf/pdfkit@4.0.3
+
+## 4.0.1
+
+### Patch Changes
+
+- [`e257f7ee`](https://github.com/diegomura/react-pdf/commit/e257f7ee18ff09f4895cd16c0b21b824678384c8) Thanks [@diegomura](https://github.com/diegomura)! - fix: font store types
+
+- Updated dependencies []:
+  - @react-pdf/types@2.8.2
+
+## 4.0.0
+
+### Major Changes
+
+- [#3102](https://github.com/diegomura/react-pdf/pull/3102) [`24690f52`](https://github.com/diegomura/react-pdf/commit/24690f5238e4eacf28351cf9996856a7d196d29e) Thanks [@diegomura](https://github.com/diegomura)! - feat: handle standard fonts in fonts package
+
+### Patch Changes
+
+- [#3087](https://github.com/diegomura/react-pdf/pull/3087) [`7cd66e4f`](https://github.com/diegomura/react-pdf/commit/7cd66e4fc37cd1393adc6250a919fe2629812082) Thanks [@diegomura](https://github.com/diegomura)! - fix: font exported types
+
+- [#3093](https://github.com/diegomura/react-pdf/pull/3093) [`a2de2685`](https://github.com/diegomura/react-pdf/commit/a2de2685b25c797f266775c2e35a6535090393b7) Thanks [@diegomura](https://github.com/diegomura)! - refactor: font strict type checking
+
+- [#3092](https://github.com/diegomura/react-pdf/pull/3092) [`481b536f`](https://github.com/diegomura/react-pdf/commit/481b536f4ad145fb227829399b85a35838a506f8) Thanks [@diegomura](https://github.com/diegomura)! - refactor: convert layout package to TS
+
+- Updated dependencies [[`7cd66e4f`](https://github.com/diegomura/react-pdf/commit/7cd66e4fc37cd1393adc6250a919fe2629812082)]:
+  - @react-pdf/types@2.8.1
+
+## 3.1.0
+
+### Minor Changes
+
+- [#3079](https://github.com/diegomura/react-pdf/pull/3079) [`700535c5`](https://github.com/diegomura/react-pdf/commit/700535c57ff1b105d923be70f4fc4bfdf4479f91) Thanks [@diegomura](https://github.com/diegomura)! - refactor: convert font package to TS
+
+### Patch Changes
+
+- Updated dependencies [[`96c2464d`](https://github.com/diegomura/react-pdf/commit/96c2464dfaa7294e0d79b7ed64743bfd7b1a8c72), [`24fe4bf8`](https://github.com/diegomura/react-pdf/commit/24fe4bf894fff055121926488b30d0bf212a9c45), [`700535c5`](https://github.com/diegomura/react-pdf/commit/700535c57ff1b105d923be70f4fc4bfdf4479f91)]:
+  - @react-pdf/types@2.8.0
+
+## 3.0.2
+
+### Patch Changes
+
+- Updated dependencies [[`01944231`](https://github.com/diegomura/react-pdf/commit/01944231a342d502b832aeecb4c313020b8360c8)]:
+  - @react-pdf/types@2.7.1
+
+## 3.0.1
+
+### Patch Changes
+
+- [#2947](https://github.com/diegomura/react-pdf/pull/2947) [`ed562b9b`](https://github.com/diegomura/react-pdf/commit/ed562b9b7f14bc76a1cd83aaaf1dab966bd7540b) Thanks [@diegomura](https://github.com/diegomura)! - feat: remove cross-fetch
+
+## 3.0.0
+
+### Major Changes
+
+- [#2871](https://github.com/diegomura/react-pdf/pull/2871) [`70f29a04`](https://github.com/diegomura/react-pdf/commit/70f29a0407b1d56e9a7932b25c0d69132e9b4119) Thanks [@diegomura](https://github.com/diegomura)! - feat!: drop cjs support
+
+### Patch Changes
+
+- Updated dependencies [[`46c3047d`](https://github.com/diegomura/react-pdf/commit/46c3047de56ae82f062b72c4910a4e6096eee99f), [`55973278`](https://github.com/diegomura/react-pdf/commit/55973278ac8bc8f703b63844f57d6f155ae8d86f)]:
+  - @react-pdf/types@2.7.0
+
+## 2.5.2
+
+### Patch Changes
+
+- Updated dependencies [[`8e6a832`](https://github.com/diegomura/react-pdf/commit/8e6a8320f86354aff950c296a96bc41a33e9dab2), [`4bafab8`](https://github.com/diegomura/react-pdf/commit/4bafab8455c9003759f48bad20a720baf4ed189b)]:
+  - @react-pdf/types@2.6.0
+
+## 2.5.1
+
+### Patch Changes
+
+- Updated dependencies [[`22a34a9`](https://github.com/diegomura/react-pdf/commit/22a34a91b16a201cd8288e0dbea9368b12ca73f5)]:
+  - @react-pdf/types@2.5.0
+
+## 2.5.0
+
+### Minor Changes
+
+- [#2640](https://github.com/diegomura/react-pdf/pull/2640) [`67c265a`](https://github.com/diegomura/react-pdf/commit/67c265a7e39cc0baa319f49137219677904695e6) Thanks [@nikgraf](https://github.com/nikgraf)! - Add support for fontFamily fallbacks e.g. fontFamily: ['Roboto', 'NotoSansArabic']
+
 ## 2.4.4
 
 ### Patch Changes

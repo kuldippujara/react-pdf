@@ -1,35 +1,18 @@
-import babel from '@rollup/plugin-babel';
+import typescript from '@rollup/plugin-typescript';
+import { dts } from 'rollup-plugin-dts';
+import del from 'rollup-plugin-delete';
 
-const cjs = {
-  exports: 'named',
-  format: 'cjs',
-  interop: 'compat',
-};
-
-const esm = {
-  format: 'es',
-};
-
-const getCJS = (override) => Object.assign({}, cjs, override);
-const getESM = (override) => Object.assign({}, esm, override);
-
-const input = 'src/index.js';
-
-const getExternal = () => [/@babel\/runtime/];
-
-const getPlugins = () => [
-  babel({
-    babelrc: true,
-    babelHelpers: 'runtime',
-    exclude: 'node_modules/**',
-  }),
+const config = [
+  {
+    input: 'src/index.ts',
+    output: { format: 'es', dir: 'lib' },
+    plugins: [typescript()],
+  },
+  {
+    input: './lib/types/index.d.ts',
+    output: [{ file: 'lib/index.d.ts', format: 'es' }],
+    plugins: [dts(), del({ targets: 'lib/types', hook: 'buildEnd' })],
+  },
 ];
-
-const config = {
-  input,
-  output: [getESM({ file: 'lib/index.js' }), getCJS({ file: 'lib/index.cjs' })],
-  external: getExternal(),
-  plugins: getPlugins(),
-};
 
 export default config;

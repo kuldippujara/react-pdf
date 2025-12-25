@@ -1,5 +1,132 @@
 # @react-pdf/render
 
+## 4.3.1
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @react-pdf/types@2.9.1
+
+## 4.3.0
+
+### Minor Changes
+
+- [#3112](https://github.com/diegomura/react-pdf/pull/3112) [`f89f75c1`](https://github.com/diegomura/react-pdf/commit/f89f75c1f132ba19b54847c3ac23efec675f8d0a) Thanks [@diegomura](https://github.com/diegomura)! - feat: add xLinkHref, gradientTransform and gradientUnits support
+
+### Patch Changes
+
+- [`01b4ff5c`](https://github.com/diegomura/react-pdf/commit/01b4ff5cb00420dd37c2f28fb95822dd18cdd982) Thanks [@diegomura](https://github.com/diegomura)! - fix: debug prop
+
+- Updated dependencies [[`f89f75c1`](https://github.com/diegomura/react-pdf/commit/f89f75c1f132ba19b54847c3ac23efec675f8d0a)]:
+  - @react-pdf/types@2.9.0
+
+## 4.2.1
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @react-pdf/types@2.8.2
+
+## 4.2.0
+
+### Minor Changes
+
+- [#3098](https://github.com/diegomura/react-pdf/pull/3098) [`bfb51ec0`](https://github.com/diegomura/react-pdf/commit/bfb51ec09b851c52659ce16fed1286173e9516a9) Thanks [@diegomura](https://github.com/diegomura)! - refactor: convert render package to TS
+
+- [#3102](https://github.com/diegomura/react-pdf/pull/3102) [`24690f52`](https://github.com/diegomura/react-pdf/commit/24690f5238e4eacf28351cf9996856a7d196d29e) Thanks [@diegomura](https://github.com/diegomura)! - feat: handle standard fonts in fonts package
+
+### Patch Changes
+
+- [#3104](https://github.com/diegomura/react-pdf/pull/3104) [`ddfa3675`](https://github.com/diegomura/react-pdf/commit/ddfa367587618b313b4b0b3b57a9a7631e8e7604) Thanks [@diegomura](https://github.com/diegomura)! - feat(textkit): expect font array
+
+- Updated dependencies [[`7cd66e4f`](https://github.com/diegomura/react-pdf/commit/7cd66e4fc37cd1393adc6250a919fe2629812082), [`ddfa3675`](https://github.com/diegomura/react-pdf/commit/ddfa367587618b313b4b0b3b57a9a7631e8e7604), [`c7b74963`](https://github.com/diegomura/react-pdf/commit/c7b749632f07db7808d58d99357dc830d4895da8), [`bfb51ec0`](https://github.com/diegomura/react-pdf/commit/bfb51ec09b851c52659ce16fed1286173e9516a9), [`24690f52`](https://github.com/diegomura/react-pdf/commit/24690f5238e4eacf28351cf9996856a7d196d29e), [`481b536f`](https://github.com/diegomura/react-pdf/commit/481b536f4ad145fb227829399b85a35838a506f8), [`b06d3a0f`](https://github.com/diegomura/react-pdf/commit/b06d3a0f64593ac18097efd061334f1e5bd70095)]:
+  - @react-pdf/types@2.8.1
+  - @react-pdf/textkit@6.0.0
+  - @react-pdf/fns@3.1.2
+
+## 4.1.2
+
+### Patch Changes
+
+- [#3065](https://github.com/diegomura/react-pdf/pull/3065) [`226467e3`](https://github.com/diegomura/react-pdf/commit/226467e39443d3690b8f8c3298aa8278b43fbfa6) Thanks [@diegomura](https://github.com/diegomura)! - refactor: partially unify pdfkit
+
+- Updated dependencies [[`96c2464d`](https://github.com/diegomura/react-pdf/commit/96c2464dfaa7294e0d79b7ed64743bfd7b1a8c72), [`24fe4bf8`](https://github.com/diegomura/react-pdf/commit/24fe4bf894fff055121926488b30d0bf212a9c45), [`700535c5`](https://github.com/diegomura/react-pdf/commit/700535c57ff1b105d923be70f4fc4bfdf4479f91), [`442ce355`](https://github.com/diegomura/react-pdf/commit/442ce35534f916b9146a35fd03870387ed488d92), [`3007d34a`](https://github.com/diegomura/react-pdf/commit/3007d34ad3e10bf32ada3631938f5bb08e1c549f)]:
+  - @react-pdf/primitives@4.1.1
+  - @react-pdf/types@2.8.0
+  - @react-pdf/fns@3.1.1
+  - @react-pdf/textkit@5.0.3
+
+## 4.1.1
+
+### Patch Changes
+
+- Updated dependencies [[`d36ace66`](https://github.com/diegomura/react-pdf/commit/d36ace66c77d57d845894e89772be7ae0cdd25ee)]:
+  - @react-pdf/fns@3.1.0
+  - @react-pdf/textkit@5.0.2
+
+## 4.1.0
+
+### Minor Changes
+
+- [`7cd71714`](https://github.com/diegomura/react-pdf/commit/7cd7171472b0f300db56b7805c5f966bf4ced6e2) Thanks [@diegomura](https://github.com/diegomura)! - feat: added Form Annotation support
+
+### Patch Changes
+
+- [#3062](https://github.com/diegomura/react-pdf/pull/3062) [`5cc47319`](https://github.com/diegomura/react-pdf/commit/5cc47319bb428f6d4bcad21cd6dba9afca5cdc17) Thanks [@diegomura](https://github.com/diegomura)! - refactor: unify pdfkit image mixin
+
+- Updated dependencies [[`7cd71714`](https://github.com/diegomura/react-pdf/commit/7cd7171472b0f300db56b7805c5f966bf4ced6e2), [`01944231`](https://github.com/diegomura/react-pdf/commit/01944231a342d502b832aeecb4c313020b8360c8)]:
+  - @react-pdf/primitives@4.1.0
+  - @react-pdf/types@2.7.1
+
+## 4.0.2
+
+### Patch Changes
+
+- Updated dependencies [[`00bfdc1e`](https://github.com/diegomura/react-pdf/commit/00bfdc1e5a6c673d2de7b3ab09d5020e932562fb)]:
+  - @react-pdf/textkit@5.0.1
+
+## 4.0.1
+
+### Patch Changes
+
+- [#2948](https://github.com/diegomura/react-pdf/pull/2948) [`03322a75`](https://github.com/diegomura/react-pdf/commit/03322a756f44863543673ff597582444c180989b) Thanks [@diegomura](https://github.com/diegomura)! - fix: stroke dash array computation
+
+- [#2945](https://github.com/diegomura/react-pdf/pull/2945) [`b5c0fe64`](https://github.com/diegomura/react-pdf/commit/b5c0fe646108a960a528290b175511842020d600) Thanks [@diegomura](https://github.com/diegomura)! - fix: skew transformation
+
+## 4.0.0
+
+### Major Changes
+
+- [#2871](https://github.com/diegomura/react-pdf/pull/2871) [`70f29a04`](https://github.com/diegomura/react-pdf/commit/70f29a0407b1d56e9a7932b25c0d69132e9b4119) Thanks [@diegomura](https://github.com/diegomura)! - feat!: drop cjs support
+
+### Patch Changes
+
+- Updated dependencies [[`46c3047d`](https://github.com/diegomura/react-pdf/commit/46c3047de56ae82f062b72c4910a4e6096eee99f), [`55973278`](https://github.com/diegomura/react-pdf/commit/55973278ac8bc8f703b63844f57d6f155ae8d86f), [`70f29a04`](https://github.com/diegomura/react-pdf/commit/70f29a0407b1d56e9a7932b25c0d69132e9b4119)]:
+  - @react-pdf/types@2.7.0
+  - @react-pdf/primitives@4.0.0
+  - @react-pdf/textkit@5.0.0
+  - @react-pdf/fns@3.0.0
+
+## 3.5.0
+
+### Minor Changes
+
+- [#2771](https://github.com/diegomura/react-pdf/pull/2771) [`8e6a832`](https://github.com/diegomura/react-pdf/commit/8e6a8320f86354aff950c296a96bc41a33e9dab2) Thanks [@nikischin](https://github.com/nikischin)! - fix: fix dpi
+
+### Patch Changes
+
+- [#2836](https://github.com/diegomura/react-pdf/pull/2836) [`53bf803`](https://github.com/diegomura/react-pdf/commit/53bf803465f4fecf13531d1a10697c3d4067cf8f) Thanks [@obi-awyss](https://github.com/obi-awyss)! - [fix] "TypeError: renderFn is not a function"
+  It may also address issue #2644
+- Updated dependencies [[`8e6a832`](https://github.com/diegomura/react-pdf/commit/8e6a8320f86354aff950c296a96bc41a33e9dab2), [`4bafab8`](https://github.com/diegomura/react-pdf/commit/4bafab8455c9003759f48bad20a720baf4ed189b)]:
+  - @react-pdf/types@2.6.0
+
+## 3.4.4
+
+### Patch Changes
+
+- Updated dependencies [[`22a34a9`](https://github.com/diegomura/react-pdf/commit/22a34a91b16a201cd8288e0dbea9368b12ca73f5)]:
+  - @react-pdf/types@2.5.0
+
 ## 3.4.3
 
 ### Patch Changes

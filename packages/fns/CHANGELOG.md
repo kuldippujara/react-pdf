@@ -1,5 +1,33 @@
 # @react-pdf/fns
 
+## 3.1.2
+
+### Patch Changes
+
+- [#3092](https://github.com/diegomura/react-pdf/pull/3092) [`481b536f`](https://github.com/diegomura/react-pdf/commit/481b536f4ad145fb227829399b85a35838a506f8) Thanks [@diegomura](https://github.com/diegomura)! - refactor: convert layout package to TS
+
+## 3.1.1
+
+### Patch Changes
+
+- [#3082](https://github.com/diegomura/react-pdf/pull/3082) [`24fe4bf8`](https://github.com/diegomura/react-pdf/commit/24fe4bf894fff055121926488b30d0bf212a9c45) Thanks [@diegomura](https://github.com/diegomura)! - feat: rework and type stylesheet package
+
+- [#3077](https://github.com/diegomura/react-pdf/pull/3077) [`442ce355`](https://github.com/diegomura/react-pdf/commit/442ce35534f916b9146a35fd03870387ed488d92) Thanks [@diegomura](https://github.com/diegomura)! - refactor: convert textkit package to TS
+
+- [#3070](https://github.com/diegomura/react-pdf/pull/3070) [`3007d34a`](https://github.com/diegomura/react-pdf/commit/3007d34ad3e10bf32ada3631938f5bb08e1c549f) Thanks [@diegomura](https://github.com/diegomura)! - refactor: convert fns package to TS
+
+## 3.1.0
+
+### Minor Changes
+
+- [`d36ace66`](https://github.com/diegomura/react-pdf/commit/d36ace66c77d57d845894e89772be7ae0cdd25ee) Thanks [@diegomura](https://github.com/diegomura)! - feat: add without fn
+
+## 3.0.0
+
+### Major Changes
+
+- [#2871](https://github.com/diegomura/react-pdf/pull/2871) [`70f29a04`](https://github.com/diegomura/react-pdf/commit/70f29a0407b1d56e9a7932b25c0d69132e9b4119) Thanks [@diegomura](https://github.com/diegomura)! - feat!: drop cjs support
+
 ## 2.2.1
 
 ### Patch Changes
