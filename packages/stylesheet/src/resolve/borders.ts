@@ -74,7 +74,7 @@ const resolveBorderShorthand = <K extends BorderKey>(
     }
 
     if (key.match(/Radius$/)) {
-      const radius = value ? transformUnit(container, value) : undefined;
+      let radius = value ? transformUnit(container, value) : undefined;
 
       if (typeof radius !== 'number')
         throw new Error(`Invalid border radius: ${radius}`);
